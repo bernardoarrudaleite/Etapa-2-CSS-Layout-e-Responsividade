@@ -1,14 +1,11 @@
-/* GameHub - CSS simples
-   Os comentários marcam onde cada requisito aparece. */
 
-/* ===== BOX MODEL + SELETOR UNIVERSAL ===== */
 * {
-  box-sizing: border-box;   /* padding e borda entram na largura */
+  box-sizing: border-box;  
   margin: 0;
   padding: 0;
 }
 
-/* ===== TIPOGRAFIA E CORES (seletor de elemento) ===== */
+
 body {
   font-family: Arial, sans-serif;
   font-size: 1rem;
@@ -17,7 +14,7 @@ body {
   background-color: #1c1c1c;
 }
 
-h1, h2, h3 {                      /* seletor agrupado */
+h1, h2, h3 {                     
   font-family: Georgia, serif;
   margin-bottom: 0.75rem;
 }
@@ -41,7 +38,7 @@ img {
   height: auto;
 }
 
-/* ===== ÁREA DE NAVEGAÇÃO (Flexbox) ===== */
+
 header {
   padding: 1.5rem;
   text-align: center;
@@ -49,12 +46,12 @@ header {
   border-bottom: 3px solid #c9a54e;
 }
 
-#inicio h1 {                       /* seletor de id + descendente */
+#inicio h1 {                       
   color: #c9a54e;
   letter-spacing: 0.05em;
 }
 
-.item {                            /* seletor de classe */
+.item {                           
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -64,12 +61,12 @@ header {
   background-color: #333333;
 }
 
-.item > a {                        /* seletor de filho direto */
+.item > a {                        
   color: #eeeeee;
   text-decoration: none;
 }
 
-/* ===== BOTÕES + ESTADOS DE INTERAÇÃO ===== */
+
 button,
 .btn {
   padding: 0.5rem 1rem;
@@ -86,22 +83,22 @@ button a {
   text-decoration: none;
 }
 
-button:hover,                      /* mouse em cima */
+button:hover,                     
 .item > a:hover {
   background-color: #a98a3a;
   color: #ffffff;
 }
 
-button:active {                    /* clicando */
+button:active {                    
   transform: translateY(1px);
 }
 
-button:disabled {                  /* desabilitado */
+button:disabled {                 
   opacity: 0.5;
   cursor: not-allowed;
 }
 
-/* ações de edição e exclusão */
+
 .btn-editar {
   color: #ffffff;
   background-color: #5b8fb0;
@@ -112,7 +109,7 @@ button:disabled {                  /* desabilitado */
   background-color: #c0453a;
 }
 
-/* ===== FORMULÁRIO DE CADASTRO ===== */
+
 form {
   max-width: 28rem;
 }
@@ -123,7 +120,7 @@ label {
   font-weight: bold;
 }
 
-input[type="checkbox"] + label {   /* seletor de atributo + irmão adjacente */
+input[type="checkbox"] + label {  
   display: inline;
   font-weight: normal;
 }
@@ -144,17 +141,17 @@ input[type="checkbox"] {
   width: auto;
 }
 
-input:focus,                       /* campo selecionado */
+input:focus,                     
 select:focus,
 textarea:focus {
   outline: 2px solid #c9a54e;
 }
 
-input:invalid:not(:placeholder-shown) {  /* campo com erro */
+input:invalid:not(:placeholder-shown) {  
   border-color: #c0453a;
 }
 
-#login {                           /* popover de login */
+#login {                          
   padding: 1.5rem;
   color: #eeeeee;
   background-color: #2a2a2a;
@@ -162,7 +159,7 @@ input:invalid:not(:placeholder-shown) {  /* campo com erro */
   border-radius: 8px;
 }
 
-/* ===== PESQUISA, FILTROS E ORDENAÇÃO (Flexbox) ===== */
+
 .barra-ferramentas {
   display: flex;
   flex-wrap: wrap;
@@ -181,10 +178,10 @@ input:invalid:not(:placeholder-shown) {  /* campo com erro */
   flex: 0 1 12rem;
 }
 
-/* ===== LISTAGEM DOS ITENS (CSS Grid) ===== */
+
 .lista-itens {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);   /* 3 colunas iguais */
+  grid-template-columns: repeat(3, 1fr);   
   gap: 1rem;
   list-style: none;
 }
@@ -200,13 +197,13 @@ input:invalid:not(:placeholder-shown) {  /* campo com erro */
   border-color: #c9a54e;
 }
 
-.card-item .acoes {                /* seletor descendente */
+.card-item .acoes {               
   display: flex;
   gap: 0.5rem;
   margin-top: 1rem;
 }
 
-/* ===== DETALHES DOS ITENS ===== */
+
 main {
   max-width: 70rem;
   margin: 0 auto;
@@ -247,15 +244,15 @@ th {
   background-color: #c9a54e;
 }
 
-tbody tr:nth-child(even) {         /* pseudo-classe estrutural */
+tbody tr:nth-child(even) {        
   background-color: #2a2a2a;
 }
 
-li::marker {                       /* pseudo-elemento */
+li::marker {                      
   color: #c9a54e;
 }
 
-/* ===== MENSAGENS E ESTADOS ===== */
+
 .alerta {
   margin-bottom: 1rem;
   padding: 0.75rem 1rem;
@@ -285,7 +282,7 @@ li::marker {                       /* pseudo-elemento */
   border-radius: 8px;
 }
 
-/* ===== RODAPÉ ===== */
+
 footer {
   padding: 1.5rem;
   text-align: center;
@@ -293,14 +290,14 @@ footer {
   border-top: 3px solid #c9a54e;
 }
 
-/* ===== MEDIA QUERIES ===== */
-@media (max-width: 64rem) {        /* tablet: 2 colunas */
+
+@media (max-width: 64rem) {       
   .lista-itens {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
-@media (max-width: 40rem) {        /* celular: 1 coluna */
+@media (max-width: 40rem) {      
   .lista-itens {
     grid-template-columns: 1fr;
   }
